@@ -6,7 +6,7 @@ export function formatPrice(price) {
     }
     const thousands = Math.floor(price / 1000);
     const singles = price % 1000;
-    return `${thousands} ${singles}`;
+    return `${thousands}  ${singles.toString ().padStart (3,'0')}`;
 }
 
 export function formatPriceRange(priceArr, sign) {
